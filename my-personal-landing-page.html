@@ -50,7 +50,15 @@
         <a href="https://youtube.com/@chsnpepl" ><i class="lab la-youtube"></i></a>
         <a href="https://github.com/Waylons-dad35"><i class="lab la-github"></i> </a>
   </div>
+    
+    <div class="container">
+      <h6 class="mode-status">Light Mode</h6>
+      <label class="toggle-switch">
+        <input type="checkbox" id="mode-toggle">
+        <span class="slider"></span>
+      </label>
     </div>
+  </div>
   </nav>
 
   <!--CONTENT-->
@@ -61,6 +69,13 @@
 
     <section id="home" class="height px-lg-5">
         <div class="container">
+          <div class="container d-flex flex-column justify-content-center">
+            <div class="content mx-auto mt-5 text-center">
+              <div id="quote-output">Click below to generate a quote</div>
+              <div id="author-output"></div>
+              <button id="new-quote-btn" class="btn btn-success mt-5">New Quote</button>
+            </div>
+          </div>
             
             <div class="row">
             
@@ -148,12 +163,13 @@
           <div class="col-md-6">
             <div class="card-custom rounded-4 bg-base shadow-effect">
               <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuIFLsL6ZTE97EG1-5VyCoEUaAbmBLsopzrA&usqp=CAU" alt="">
+                <img class="rounded-4" src="C:\Users\Admin\OneDrive\Pictures\Screenshot 2023-09-24 212156.jpg" alt="screen shot of age calculator">
+            
              </div>
               <div class="card-custom-content p-4">
-                <h4>Personal Landing Page</h4>
-                <p>Innovation that exceeds expectations.</p>
-                <a href="link-custom">Read More</a>
+                <h4>Age Calculator</h4>
+                <p>This is an age calculator that will calculate age based off of the date entered</p>
+                <a href="https://codepen.io/MarTaize-Fails/pen/dywmYQq">View Project</a>
               </div>
             </div>
             
@@ -162,12 +178,12 @@
           <div class="col-md-6">
             <div class="card-custom rounded-4 bg-base shadow-effect">
               <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbD4nITAjUTvCprePyLufgdgSqsC4nFe5P3g&usqp=CAU" alt="project photo">
+                <img class="rounded-4" src="C:\Users\Admin\OneDrive\Pictures\Screenshot 2023-09-24 212927.jpg" alt="screenshot of to do list project">
               </div>
               <div class="card-custom-content p-4">
-                <h4>Personal Landing Page</h4>
-                <p>Innovation that exceeds expectations.</p>
-                <a href="link-custom">Read More</a>
+                <h4>To-Do List</h4>
+                <p>This to-do list will accept task and list them in order under the task bar. It will display a random picture next to the checkbox. It will cross-out the task if the task is checked</p>
+                <a href="https://codepen.io/MarTaize-Fails/pen/KKbodjN">View Project</a>
               </div>
             
             </div>
@@ -177,24 +193,24 @@
           <div class="col-md-6">
             <div class="card-custom rounded-4 bg-base shadow-effect">
               <div class="card-custom-image rounded-4">
-                <img class="rounded-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbD4nITAjUTvCprePyLufgdgSqsC4nFe5P3g&usqp=CAU" alt="project photo">
+                <img class="rounded-4" src="C:\Users\Admin\OneDrive\Pictures\Screenshot 2023-09-24 214047.jpg" alt="Fade and slide in and out scroll screenshot">
               </div>
               <div class="card-custom-content p-4">
-                <h4>Personal Landing Page</h4>
-                <p>Innovation that exceeds expectations.</p>
-                <a href="link-custom">Read More</a>
+                <h4>Fade and Slide Scroll</h4>
+                <p>This project will slide the content in and fade it out as the user scroll down </p>
+                <a href="https://codepen.io/MarTaize-Fails/pen/VwqXeZg">View Project</a>
               </div>
             </div>
           </div>
               <div class="col-md-6">
                 <div class="card-custom rounded-4 bg-base shadow-effect">
                   <div class="card-custom-image rounded-4">
-                    <img class="rounded-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbD4nITAjUTvCprePyLufgdgSqsC4nFe5P3g&usqp=CAU" alt="project photo">
+                    <img class="rounded-4" src="c:\Users\Admin\OneDrive\Pictures\mini calc.jpg" alt="project photo">
                   </div>
                   <div class="card-custom-content p-4">
-                    <h4>Personal Landing Page</h4>
-                    <p>Innovation that exceeds expectations.</p>
-                    <a href="link-custom">Read More</a>
+                    <h4>Mini Calculator</h4>
+                    <p>A mini calculator project </p>
+                    <a href="https://codepen.io/MarTaize-Fails/pen/ZEwLoGm">View Project</a>
                  </div>
               </div>
           </div>
@@ -324,28 +340,30 @@
 
 <!--Contact-->
 
-  <section id="contact" class="full-height px-lg-5 pt-5">
+  <section  class="full-height px-lg-5 pt-5">
+    
     <div class="container">
     
       <div class="row justify-content-center">
         <div class="col-lg-8 pb-4">
           <h6 class="text-brand">CONTACT</h6>
           <h1>Let's Connect</h1>
-  <form action="#" class="row g-lg-3 gy-3">
+  <form onsubmit="return validateForm()" method="post" action="#" target="_self" autocomplete="off" class="row g-lg-3 gy-3" id="contact" >
 <div class="form-group col-md-6">
-    <input type="text" class="form-control" placeholder="NAME">
+    <input type="text" class="form-control" placeholder="NAME" id="name" required >
 </div>
 <div class="form-group col-md-6">
-  <input type="email" class="form-control" placeholder="Email">
+  <input type="email" class="form-control" placeholder="Email" required  >
 </div>
 <div class="form-group col-md-12">
-  <input type="text" class="form-control" placeholder="Subject">
+  <input type="text" class="form-control" placeholder="Subject" >
 </div>
 <div class="form-group col-md-12">
   <textarea name="" rows="4" class="form-control" placeholder="Message"></textarea>
 </div>
 <div class="form-group col-md-12">
   <button type="submit" class="btn btn-brand">Contact Me</button>
+
 </div>
 </form>
 
@@ -354,13 +372,17 @@
 
   </div>
       </div>
-</section>
+
+
+<!--FOOTER-->
 <footer class="footer">
   &copy; 2023 MarTaize Fails. All rights reserved.
 </footer>
 
 </div>
 <!--/End of content-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzpTW11u74A7sky93AmSsNgNqqwaLegZc&libraries=drawing"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/validator.js/13.7.0/validator.min.js"></script>
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/aos.js"></script>
     <script src="./js/main.js"></script>
